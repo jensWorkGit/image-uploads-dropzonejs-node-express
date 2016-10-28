@@ -43,7 +43,7 @@
             console.log( resp );
           });
           this.on('thumbnail', function(file) {
-            if ( file.width < 640 || file.height < 480 ) {
+            if ( file.width < 1 || file.height < 1 ) {
               file.rejectDimensions();
             } else {
               file.acceptDimensions();
@@ -53,7 +53,7 @@
         accept: function(file, done) {
           file.acceptDimensions = done;
           file.rejectDimensions = function() {
-            done('The image must be at least 640 x 480px')
+            done('The image must be at least 1 x 1px')
           };
         }
       };

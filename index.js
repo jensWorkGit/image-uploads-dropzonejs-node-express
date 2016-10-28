@@ -28,9 +28,9 @@ app.post('/upload', upload.single('file'), function (req, res, next) {
 
     var dimensions = sizeOf(req.file.path);
 
-    if(( dimensions.width < 640 ) || ( dimensions.height < 480 )) {
+    if(( dimensions.width < 1 ) || ( dimensions.height < 1 )) {
         return res.status(422).json({
-            error: 'The image must be at least 640 x 480px'
+            error: 'The image must be at least 1 x 1'
         });
     }
 
