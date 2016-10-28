@@ -12,4 +12,4 @@ Full details will be in the article, but here's a quickstart:
 4. Run `npm install`
 5. Run `bower install`
 6. Run the app with `node index.js`
-7. The app will run on port 8080
+7. The app will run on port 8072
